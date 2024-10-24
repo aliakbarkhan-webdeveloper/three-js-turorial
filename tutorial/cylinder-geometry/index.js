@@ -7,14 +7,28 @@ const camera = new THREE.PerspectiveCamera(
   2,
   10
 );
-const light = new THREE.AmbientLight();
-scene.add(light);
+
+//Ambient Light
+// const ambientLight = new THREE.AmbientLight(0xffffff, 0.2);
+// scene.add(ambientLight);
+
+//directional light Light
+
+// const directionLight = new THREE.DirectionalLight(0xffffff, 1);
+// directionLight.position.set(-1, 1, 1);
+// scene.add(directionLight);
+
+//Point Light
+
+const pointLight = new THREE.PointLight(0xffffff, 1,10,2);
+pointLight.position.set(1, 3, 5);
+scene.add(pointLight);
 
 const geometry = new THREE.CylinderGeometry(1, 1, 3, 5, 9);
 // const material = new THREE.MeshBasicMaterial({ color: "red"});
 const material = new THREE.MeshStandardMaterial({
   color: "red",
-  wireframe: true,
+  wireframe: false,
 });
 console.log(material);
 
