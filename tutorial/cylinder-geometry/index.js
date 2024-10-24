@@ -38,10 +38,21 @@ scene.add(cube);
 camera.position.z = 6;
 // cube.position.x = 3;
 // cube.scale.y = 1.2;
+
+//lightHelper
+
+const lightHelper=new THREE.PointLightHelper(pointLight,0.1);
+scene.add(lightHelper)
+
+
+
 const canvas = document.querySelector("#draw");
 const renderer = new THREE.WebGLRenderer({ canvas: canvas });
 
 renderer.setSize(window.innerWidth, window.innerHeight);
+
+
+
 
 const clock = new THREE.Clock();
 function animate() {
