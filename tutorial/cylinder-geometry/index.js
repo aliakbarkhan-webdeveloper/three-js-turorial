@@ -7,7 +7,7 @@ const camera = new THREE.PerspectiveCamera(
   2,
   10
 );
-const geometry = new THREE.CylinderGeometry(1, 1, 3, 5, 1, false);
+const geometry = new THREE.CylinderGeometry(1, 1, 3, 5, 1);
 // const material = new THREE.MeshBasicMaterial({ color: "red"});
 const material = new THREE.MeshStandardMaterial({ color: red });
 const cube = new THREE.Mesh(geometry, material);
